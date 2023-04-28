@@ -13,10 +13,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      AZURE_WEBAPP_URL: https://testingtrial123.azurewebsites.net
+      
     steps:
       - uses: actions/checkout@v2
-
+            
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
